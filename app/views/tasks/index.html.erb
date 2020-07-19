@@ -1,6 +1,6 @@
-<h1>テキスト一覧</h1>
+<% if logged_in? %>
+  <h1>テキスト一覧</h1>
 
-<% if @tasks.any? %>
   <table class="table table-striped">
     <thead>
       <tr>
@@ -21,6 +21,13 @@
   </table>
   <div>
     <%= paginate @tasks %>
+  </div>
+  <% else %>
+  <div class="center jumbotron">
+    <div class="text-center">
+      <h1>Welcome to the Tasklists</h1>
+      <%= link_to 'Sign up now!', signup_path, class: 'btn btn-lg btn-primary' %>
+    </div>
   </div>
 <% end %>
 

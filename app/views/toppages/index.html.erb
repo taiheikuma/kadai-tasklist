@@ -3,9 +3,9 @@
     <aside class="col-sm-4">
       <%= form_with(model: @task, local: true) do |f| %>
         <div class="form-group">
-          <p>ステータス</p>
+          <h4>ステータス</h4>
           <%= f.text_area :status, class: 'form-control', rows: 5 %>
-          <p>タスク</p>
+          <h4>タスク</h4>
           <%= f.text_area :content, class: 'form-control', rows: 5 %>
         </div>
         <%= f.submit 'Post', class: 'btn btn-primary btn-block' %>
