@@ -10,5 +10,5 @@ resources :users, only: [:index, :show, :new, :create]
 
 root to: 'tasks#index'
 
-  resources :tasks
+resources :tasks
 end
